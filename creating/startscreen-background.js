@@ -96,78 +96,86 @@ function startMeny() {
   push();
   fill(255, 255, 255);
   rect(200, 150, 400, 200, 20);
-  translate(10, 0);
+  rect(625, 150, 150, 200, 20);
+  rect(25, 150, 150, 200, 20);
+
   fill(255, 123, 177);
-  rect(230, 180, 10, 30);
-  rect(240, 170, 20, 10);
-  rect(240, 210, 20, 10);
+  rect(240, 180, 10, 30);
+  rect(250, 170, 20, 10);
+  rect(250, 210, 20, 10);
 
-  //text
+  //title
   fill(0, 0, 0);
-  rect(270, 180, 5, 40);
-  rect(270, 180, 20, 5);
-  rect(290, 185, 5, 15);
-  rect(270, 200, 20, 5);
-  rect(290, 205, 5, 15);
+  rect(280, 180, 5, 40);
+  rect(280, 180, 20, 5);
+  rect(300, 185, 5, 15);
+  rect(280, 200, 20, 5);
+  rect(300, 205, 5, 15);
 
-  rect(310, 180, 20, 5);
-  rect(305, 185, 5, 30);
-  rect(330, 185, 5, 30);
-  rect(310, 215, 20, 5);
-  rect(345, 180, 5, 35);
-  rect(360, 180, 5, 35);
-  rect(375, 180, 5, 35);
-  rect(350, 215, 10, 5);
-  rect(365, 215, 10, 5);
+  rect(320, 180, 20, 5);
+  rect(315, 185, 5, 30);
+  rect(340, 185, 5, 30);
+  rect(320, 215, 20, 5);
+  rect(355, 180, 5, 35);
+  rect(370, 180, 5, 35);
+  rect(385, 180, 5, 35);
+  rect(360, 215, 10, 5);
+  rect(375, 215, 10, 5);
 
-  rect(375, 225, 5, 35);
-  rect(380, 260, 20, 5);
-  rect(395, 230, 5, 25);
-  rect(415, 230, 5, 35);
-  rect(400, 225, 15, 5);
-  rect(400, 245, 15, 5);
-  rect(430, 225, 5, 40);
-  rect(450, 225, 5, 40);
-  rect(435, 225, 5, 10);
-  rect(440, 235, 5, 10);
-  rect(445, 245, 5, 10);
+  rect(385, 225, 5, 35);
+  rect(390, 260, 20, 5);
+  rect(405, 230, 5, 25);
+  rect(425, 230, 5, 35);
+  rect(410, 225, 15, 5);
+  rect(410, 245, 15, 5);
+  rect(440, 225, 5, 40);
+  rect(460, 225, 5, 40);
+  rect(445, 225, 5, 10);
+  rect(450, 235, 5, 10);
+  rect(455, 245, 5, 10);
 
-  rect(465, 225, 5, 40);
-  rect(465, 225, 15, 5);
-  rect(465, 260, 15, 5);
-  rect(480, 230, 5, 30);
+  rect(475, 225, 5, 40);
+  rect(475, 225, 15, 5);
+  rect(475, 260, 15, 5);
+  rect(490, 230, 5, 30);
 
-  rect(495, 225, 5, 40);
-  rect(495, 225, 20, 5);
-  rect(495, 240, 15, 5);
-  rect(495, 260, 20, 5);
+  rect(505, 225, 5, 40);
+  rect(505, 225, 20, 5);
+  rect(505, 240, 15, 5);
+  rect(505, 260, 20, 5);
 
-  rect(525, 225, 5, 40);
-  rect(525, 225, 15, 5);
-  rect(540, 230, 5, 15);
-  rect(525, 245, 15, 5);
-  rect(540, 250, 5, 15);
+  rect(535, 225, 5, 40);
+  rect(535, 225, 15, 5);
+  rect(550, 230, 5, 15);
+  rect(535, 245, 15, 5);
+  rect(550, 250, 5, 15);
   pop();
-}
 
-function startButton() {
-  fill(255, 123, 177);
-  rect(340, 280, 120, 40);
-
+  //Click to start
+  push();
   fill(0, 0, 0);
-  rect(340, 275, 120, 5);
-  rect(340, 315, 120, 5);
-  rect(335, 280, 5, 35);
-  rect(460, 280, 5, 35);
-
-  fill(255, 255, 255);
   textSize(30);
-  text("Start", 365, 280, 100, 100);
+  text("Click S to start", 300, 290, 500, 200);
+  pop();
+
+  //Rules & description
+  push();
+  fill(0, 0, 0);
+  textSize(30);
+  text("Rules", 660, 165, 100, 50);
+  pop();
+
+  push();
+  fill(0, 0, 0);
+  textSize(14);
+  text("Use the space key to fly higher and the arrow keys to steer. Land gently on the ground or on the food in the tree.", 635, 210, 140, 300);
+  text("The crow is having his birthday party but first he needs to get down safely. Help the crow get down without hurting him to invited to his party too. Extra points if you help bring him food :)", 35, 160, 140, 300);
+  pop();
+
 }
 
 function draw() {
   setup();
   generalBackground();
   startMeny();
-  startButton();
 }
