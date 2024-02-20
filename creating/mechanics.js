@@ -131,6 +131,11 @@ function draw() {
     pop();
     if (gameMode === "endscreen" && keyIsPressed === true && keyCode === 77) {
       gameMode = "startscreen";
+      //Restarting the crow so it doesn't count as gameover
+      crowThings.x = 200;
+      crowThings.y = 10;
+      crowThings.velocity = 0.5;
+      crowThings.acceleration = 0.1;
     }
   }
 }
