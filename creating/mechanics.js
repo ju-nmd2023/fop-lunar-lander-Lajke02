@@ -4,25 +4,25 @@ function setup() {
   frameRate(30);
 }
 
-
 //Overall variables
 let gameIsRunning = true;
 let gameMode = "startscreen";
 let landingY = 380;
-
-let crowHasLanded;
 let results;
 
+//startscreen graphics
 function startScreen() {
   fill(255, 255, 255);
   rect(200, 150, 400, 200, 20);
 }
 
+// background graphics
 function gameBackground() {
   fill(211, 211, 255);
   rect(0, 0, 800, 500);
 }
 
+//ground hahaha, pretty selfexplanatory
 function ground() {
   fill(100, 100, 100);
   rect(0, 400, 800, 100);
@@ -40,6 +40,7 @@ function crow(x, y) {
   pop();
 }
 
+//winning screen
 function wonGame() {
   push();
   fill(255, 255, 255);
@@ -47,11 +48,11 @@ function wonGame() {
   fill(0, 0, 255);
   textSize(30);
   text("You Won!", 300, 170, 200, 300);
-  textSize(20);
-  text(results, 225, 225, 200, 400);
+
   pop();
 }
 
+//losing screen
 function lostGame() {
   push();
   fill(255, 255, 255);
@@ -68,7 +69,6 @@ function lostGame() {
 
 function draw() {
   //startscreen
-
   if (gameMode === "startscreen") {
     noStroke();
     gameBackground();
@@ -120,10 +120,17 @@ function draw() {
         gameIsRunning = false;
         console.log("Gameover");
       }
-      if (gameMode === "endscreen") {
-        noStroke();
-        gameBackground();
-      }
+    }
+  }
+  if (gameMode === "endscreen") {
+    noStroke();
+    push();
+    fill(0, 0, 255);
+    textSize(20);
+    text(results, 225, 225, 200, 400);
+    pop();
+    if (gameMode === "endscreen" && keyIsPressed === true && keyCode === 77) {
+      gameMode = "startscreen";
     }
   }
 }
