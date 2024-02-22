@@ -88,7 +88,7 @@ function startScreen() {
   fill(0, 0, 0);
   textSize(14);
   text(
-    "Use the space key to fly higher and the arrow keys to steer. Land gently on the ground or on the food in the tree.",
+    "Use the up arrow key to fly higher and the arrow keys to steer. Land gently on the ground.",
     635,
     210,
     140,
