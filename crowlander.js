@@ -685,6 +685,7 @@ function draw() {
   // Click S to start
   if (gameMode === "startscreen" && keyIsPressed === true && keyCode === 83) {
     gameMode = "gamescreen";
+    gameIsRunning = "false";
   }
   if (gameMode === "gamescreen") {
     noStroke();
